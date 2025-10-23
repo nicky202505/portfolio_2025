@@ -15,17 +15,17 @@ html {
   unicode-range: U+0020-007E; /* 기본 라틴 문자 (영문, 숫자, 기호) */
 }
 
+/* 
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css'); */
 
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css');
-
-@font-face {
+/* @font-face {
   font-family: 'Pretendard';
   font-style: normal;
   font-weight: 400;
   src: local('Pretendard'),
        url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-Regular.woff2') format('woff2');
   unicode-range: U+AC00-D7A3; /* 한글 음절 */
-}
+} */
 
 html, body {
   font-family: 'IBM Plex Sans', 'Pretendard', sans-serif;color : #222 ; 

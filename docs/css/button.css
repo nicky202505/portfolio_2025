@@ -6,6 +6,7 @@
 } 
 
 button.digging {
+  background-color: #f7f3eb;
   width: 90% ; 
   height: 3.6rem ; 
   border : none ; 
@@ -26,9 +27,35 @@ button.digging:hover {
   cursor: pointer;
 }  
 
-.digging i {
-  font-size: 2.0rem;
-  line-height: 2.4rem;
+
+
+button.resume, 
+button.github {
+  display: inline-block;
+  width: 200px;
+  height: 36px;
+  line-height: 36px;           /* 세로 중앙 정렬 */
+  padding: 0 12px;
+  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #ff785a ; 
+  background: transparent;
+  border-radius: 6px;  
+  gap: 100px ; 
+}
+
+button.resume:hover, 
+button.github:hover  {  
+  background: #022b5c;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);   
 }
 
 

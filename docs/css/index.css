@@ -21,7 +21,6 @@ a{
 img {
     width : 100% ; 
     height: 100% ;  
-    border-radius: 100% ;
 }
 
 li{
@@ -36,19 +35,17 @@ li{
     display:flex;     
     justify-content: center; 
     align-items: center;
-    gap : 12px ; 
-       
+    gap : 12px ;        
 }
 
 .section_title h2 {
-    font-size: 4.8rem; 
-    line-height: 4.8rem;
+    font-size: 5.6rem; 
+    line-height: 5.6rem;
 }
 
-.icon {
-    font-size: 4.8rem ;
-    line-height: 4.8rem;  
-}     
+
+
+
 
 
 
@@ -119,20 +116,113 @@ section { scroll-margin-top: calc(var(--header-h, 80px) + 12px); }
 
 /* **=========CSS for banner ===========** */ 
 
-.banner {
+section.banner {
     width : 100% ;  
-    height : 60vh ;    
+    height : 60vh ;  
+
 }
 
 .banner_inner {
-     width : 100% ;  
-     max-width : 1920px ; 
-     margin : auto ; 
-    height : 60vh ;     /* 56vh = 대략 600px */
-    border : 1px solid green ; 
-    top : 80px ;     
-    background: #1d6baf;
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+  height: 60vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  gap: 20px; /* 필요시 조정 */
+    top : 80px ;         
+  border-bottom: 1px solid #c6cdd4;    
+
 } 
+
+
+.cv_head {
+  width : 100% ; 
+  max-width : 800px ; 
+  margin : auto ;  
+  height : 6.2rem;     
+} 
+
+.banner_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center; 
+}
+
+
+.banner_text h2 {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease forwards;
+}
+
+/* 등장 타이밍 조절 */
+.banner_text h2:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.banner_text h2:nth-child(3) {
+  animation-delay: 1s;
+}
+
+/* 공통 페이드 업 */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 포인트 텍스트(2번째 줄) 전용 */
+.banner_text h2:nth-child(2) {
+  background: linear-gradient(90deg, #ff7a59, #ff9d59);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation:
+    fadeUp 1s ease forwards 0.5s,
+    gradientShift 3s ease-in-out infinite alternate;
+}
+
+/* 그라데이션 이동 */
+@keyframes gradientShift {
+  0% { background-position: 0%; }
+  100% { background-position: 100%; }
+}
+
+
+
+.portrait {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+  
+
+.portrait img {
+  width : 40% ; 
+  height : auto ; 
+}
+
+.portrait img {
+  width: 40%;
+  height: auto;
+  opacity: 0;
+  transform: translateX(60px); /* 시작점: 오른쪽 40px */
+  animation: slideIn 1.2s ease-out forwards;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
 
 
@@ -140,22 +230,17 @@ section { scroll-margin-top: calc(var(--header-h, 80px) + 12px); }
 
 section.about {
     width : 100% ;  
-    min-height : 100vh ;   
-    height : auto ; 
+    min-height : auto ; 
     padding-top : 7vh ;   
     text-align: center;
-    overflow: hidden ;
+    overflow: visible;         
 } 
 
 .about_inner {  
-    width: 90%;
-    height: 90%;
-    max-width: 1280px;
-    margin: 20px auto 0 ;   
-    padding: auto; 
-    padding-top : 20px ; 
-    overflow: hidden ;   
-} 
+    width : 100% ; 
+    max-width : 1280px ;     
+    margin : auto ;   
+ } 
 
 
 .about_inner{
@@ -165,156 +250,56 @@ section.about {
     gap: 20px;                     
 } 
 
-.cv_box{    
-    height : 90% ; 
-    justify-content: flex-start ;  
-    padding : 20px ;  
-    text-align: left;
-    overflow: hidden ;  
-    border:none ; 
-    border-bottom: 1px solid #c6cdd4;     
+
+
+.cv_head h4 {
+  font-size: 3.6rem;
+    line-height : 6.2rem;  
 }
 
+button.resume, 
+button.github {
+  height : 3.6rem ;   
+}
 
 .cv_box {
-    display: grid;              /* 그리드 레이아웃 적용 */
-    grid-template-columns: 1fr 1fr 1fr; /* 3열 */
-    grid-template-rows: 1fr;        /* 1행 */
-    gap: 20px; 
-    display : flex ; 
-    justify-content: space-between;   
-   
-} 
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  justify-content: space-evenly ;  
+  gap: 20px; /* 필요에 따라 간격 조정 */  
+  } 
 
-.text_box {
-      width : 45% ;    
-      height : 90% ;  
-      line-height: 42px ;  
-             
-} 
+ .bold{
+  font-weight: bold; 
+ }
 
-.profile{  
-       width : 60% ; 
-       height : 100% ; 
-       margin : auto ; 
-       margin-left: 20px ; 
-       padding-left: 40px; 
-    }
-
-.profile h4 {
-    font-weight : 600 ; 
+.profile01, 
+.profile02, 
+.profile03
+{text-align : left ; 
 }
-
-.rs_box {
-    width: 45%; 
-    height: 90%;
-    display: grid;                  /* 그리드 레이아웃 적용 */
-    grid-template-columns: 1fr;     /* 1열 */
-    grid-template-rows: 1fr 1fr;    /* 2행 */
-    gap: 16px;                   /* 행 사이 간격 (원하는 값으로 조정) */ 
-    }  
-
-
-
-
- /* .rectang01: 1행 2열 그리드 */
-.rectang01 {
-  width: 100%; 
-  height : 100% ;   
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 1rem;
-  align-items: center;
-  justify-items: stretch;
- /*  background-color: #f7f3eb;   */  /* 베이지색 */
-    }  
-
-
-
-
-.resimg, .gitimg { 
-    width : 140px ; 
-    height : 140px ;             
-}
-
-
-.resimg {
-    background-image: url(../images/resimg01.png); 
-     background-size: cover; /* 또는 contain */
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.gitimg {
-    background-image: url(../images/gitimg01.png); 
-     background-size: cover; /* 또는 contain */
-  background-position: center;
-  background-repeat: no-repeat; 
-}
-
- 
-
-
-.resimg h4, 
-.gitimg h4 {
-    color : #022B5C; 
-    font-weight : 1000 ; 
-    text-align: center; 
-    align-items: center; 
-}
-
-.restext{
-  text-align: center ; 
-  line-height : 32px ; 
-}
-
-.restext h5 
-  {
-    color : #022B5C;  
-  }
-
-
-
-
-
-.blog_box {
-    width:350px ;   
-    font-size: 2.4rem ; 
-    display: flex;
-    align-items: center;
-    justify-content: center;   
-    line-height: 3.6rem ;  
-    color : #ff785a; 
-} 
-
-
-   
-.cando_box{  
-    height : 90% ;  
-    overflow: hidden ; 
-    padding-top : 20px ; 
-    border: none ; 
-    border-bottom: 1px solid #c6cdd4; 
-} 
 
 
 .grid {
     width : 100% ; 
-    height : 100%  ;      
+    min-height : auto  ;     
+    overflow: visible;
 }
 
 .able_title {
     font-weight : 600 ; 
+    margin-top: 40px ; 
 }
 
 .grid_4x { 
-  height: 80%; 
+  height: 100%; 
   display: grid;       
   grid-template-columns: repeat(5, 1fr);    
   gap: 16px;     
   padding: 16px;  
   align-items: center;     
-  justify-items: center;   
+  justify-items: center;    
 }
 
 .grid_4x .able {
@@ -322,37 +307,9 @@ section.about {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100%;
+  height: 100%;  
 } 
 
-/* circle 기본형 */
-.circle {
-  position: relative;
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  overflow: hidden; 
-  font-size: 1.8rem; 
-  /* background: #9fc5eb ;  */
-  overflow: visible; /* ::after 그림자가 보이도록 */  
-  box-shadow:
-    0 2px 6px rgba(0, 0, 0, 0.08),    /* 바닥면 그림자 */
-    inset 0 1px 2px rgba(255, 255, 255, 0.3); /* 윗면 반사광 */ 
-    color : #fff; 
-    font-weight: 1000 ;  
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;  
-}
-
-
-
-.circle:hover {
-  box-shadow:
-    inset 0 3px 6px rgba(0, 0, 0, 0.25),       /* 내부 음영 */
-    inset 0 -2px 4px rgba(255, 255, 255, 0.15),/* 아래쪽 하이라이트 */
-    0 8px 18px rgba(2, 43, 92, 0.45);          /* 외부 그림자 (부드럽게 떠오름) */  
-}
 
 
 .circle_mid {
@@ -367,17 +324,15 @@ section.about {
   overflow: visible; /* ::after 그림자가 보이도록 */  
   box-shadow:
     0 2px 6px rgba(0, 0, 0, 0.08),    /* 바닥면 그림자 */
-    inset 0 1px 2px rgba(255, 255, 255, 0.3); /* 윗면 반사광 */ 
-    color : #000; 
-    font-weight: 1000 ; 
-    font-size: 1.8rem;  
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; 
+  font-weight: 1000 ; 
+  font-size: 1.8rem;  
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; 
 }
 
 
 .circle_mid {
   position: relative;
-  overflow: hidden;
+  overflow: visible;  
 }
 
 .circle_mid::after {
@@ -388,33 +343,40 @@ section.about {
   transform: translateX(-100%);
   animation: shimmer 3s infinite linear;
 }
+
 @keyframes shimmer {
   100% { transform: translateX(100%); }
 }
 
 
-
-
-
-
-
-
-
-
-
- 
-.resimg, .gitimg { 
-    width : 140px ; 
-    height : 140px ;   
-          
+.codimg h4, 
+.webimg h4, 
+.appimg h4, 
+.uximg h4, 
+.grapimg h4 
+ {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  z-index: 2;
 }
 
 
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* 반투명 검정 */
+  z-index: 1;
+}
 
 .codimg {
-    background-image: url(../images/codimg.png);  
-    background-repeat: no-repeat;             
+  background-image: url(../images/codimg.png);  
+  background-repeat: no-repeat;    
 } 
+
 
 
 .webimg {
@@ -423,7 +385,7 @@ section.about {
 }
 
 .appimg {
-    background-image: url(../images/appimg01.png);  
+    background-image: url(../images/apple.png);  
     background-repeat: no-repeat;  
 }
 
@@ -434,8 +396,8 @@ section.about {
 
 
 .grapimg {
-    background-image: url(../images/uximg01.png);  
-    background-repeat: no-repeat;   
+    background-image: url(../images/grap.jpg);  
+    background-repeat: no-repeat;    
 }
 
 
@@ -452,10 +414,11 @@ section.about {
 
 section.portfolio {
     width : 100% ;  
-    min-height : 100vh ; 
+    min-height : auto ; 
     height :auto  ;  /* 수정금지 */   
-    padding-top : 7vh ;    
+    padding-top : 7.5vh ;     
     text-align: center;
+
 }
 
 .about h2,
@@ -477,8 +440,8 @@ section.portfolio {
 .portfolio_inner{
     width : 100% ; 
     max-width : 1280px ; 
-    height : 100% ; 
-    margin : auto ; 
+    height : auto ; 
+    margin : auto ;  
 }
 
 
@@ -524,10 +487,6 @@ section.portfolio {
     padding-left: 20px;         
     border-bottom: 1px solid #c6cdd4;  
 }
-
-
-
-
 
 
 
@@ -586,15 +545,6 @@ section.portfolio {
     inset 0 -2px 4px rgba(255, 255, 255, 0.15),  /* 내부 하이라이트 */
     0 6px 12px rgba(2, 43, 92, 0.45);             /* 외부 그림자: 입체감 강조 */  
 }
-
-
-
- /* .circle_big:hover {
-  transform: rotate(200deg) scale(1.08);
-  filter: brightness(1.1) saturate(1.2);
-  transition: all 0.7s cubic-bezier(0.25, 1, 0.5, 1);
-}  */
-
 
 
 .des {   
@@ -661,16 +611,6 @@ section.portfolio {
 }
 
 
-/* ** CSS for modal**  */   
-
-
-
-
-
-
-
-
-
 .resimg, 
 .gitimg {
     display: flex;
@@ -693,29 +633,14 @@ section.portfolio {
   }
 
 
-
-
-
-.blog_box {
-    width:350px ;   
-    font-size: 2.4rem ; 
-    display: flex;
-    align-items: center;
-    justify-content: center;   
-    line-height: 3.6rem ;  
-    color : #ff785a; 
-} 
-
-
    
 .cando_box{  
-    height : 90% ;  
+    height : 100% ;  
     overflow: hidden ; 
     padding-top : 20px ; 
     border: none ; 
-    border-bottom: 1px solid #c6cdd4; 
-} 
-
+    border-bottom: 1px solid #c6cdd4;   
+}  
 
 .grid {
     width : 100% ; 
@@ -733,7 +658,7 @@ section.portfolio {
   gap: 16px;     
   padding: 16px;  
   align-items: center;     
-  justify-items: center;   
+  justify-items: center;    
 }
 
 .grid_4x .able {
@@ -814,8 +739,6 @@ section.portfolio {
 
 
 
-
-
 .resimg, .gitimg { 
     width : 140px ; 
     height : 140px ;   
@@ -863,7 +786,7 @@ section.portfolio {
 
 section.portfolio {
     width : 100% ;  
-    min-height : 100vh ; 
+    min-height : auto ; 
     height :auto  ;  /* 수정금지 */   
     padding-top : 7vh ;    
     text-align: center;
@@ -889,7 +812,7 @@ section.portfolio {
     width : 100% ; 
     max-width : 1280px ; 
     height : 100% ; 
-    margin : auto ; 
+    margin : auto ;  
 }
 
 
@@ -1098,21 +1021,18 @@ section.portfolio {
     width: 100%;
     max-width: 1280px;
     margin: auto; 
-    border: 1px solid #1d6baf;  
     min-height: 56vh;
     padding: 20px;
     display: grid;
     grid-template-columns: 2fr 1fr; /* 2열 */
     grid-template-rows: 1fr;        /* 1행 */
-    gap: 40px; 
-    padding-top: 40px ;
+    gap: 40px;   
 }
 
 
 .progress {
     width : 100% ; 
-    height : auto ;  
-    border: 1px solid #af1d35;   
+    height : auto ;   
     padding-top: 40px ;      
 }
 
@@ -1247,3 +1167,106 @@ footer {
 
 
 
+/* === Section 간격 표준화: 맨 아래 추가 === */
+:root{
+  /* 섹션 안쪽 패딩과 섹션-섹션 사이 바깥 간격(갭) */
+  --header-h: 6vh;
+  --section-y: 4vh;      /* 섹션 내부 위/아래 패딩 */
+  --section-gap: 4vh;   /* 섹션끼리 사이 간격(바깥 여백) */
+}
+
+/* 모든 섹션의 기본 패딩과 앵커 스크롤 보정 */
+section{
+  padding-block: var(--section-y);
+  scroll-margin-top: calc(var(--header-h) + 12px);
+}
+
+/* 섹션과 섹션 사이의 '외부' 간격을 통일 */
+section + section{
+  margin-top: var(--section-gap);
+}
+
+/* 첫 섹션이 헤더 바로 밑에서 너무 붙지 않게(필요시 조절) */
+section:first-of-type{
+  margin-top: calc(var(--header-h) + 2vh);
+}
+
+/* 섹션 제목 아래 여백(제목과 본문 사이)도 통일 */
+.section_title{
+  margin-bottom: 4vh;
+}
+
+/* 배너는 높이 고정이므로 추가 여백을 줄이고 내부 정렬만 유지 */
+section.banner{
+  padding-block: 4vh; /* 배너는 살짝만 */
+  margin-top: calc(var(--header-h) + 2vh); /* 페이지 최상단에 오면 자연스럽게 */
+}
+
+/* 개별 섹션에서 중복/충돌하는 padding-top 제거(덮어쓰기) */
+section.about,
+section.portfolio,
+section.skills,
+section.contact{
+  padding-top: var(--section-y) !important;
+}
+
+
+/* 헤더: 화면 맨 위에 딱 붙이기 */
+.h_wrap{
+  position: fixed;
+  top: 0;          /* ⬅️ 반드시 지정 */
+  left: 0;         /* ⬅️ 반드시 지정 */
+  right: 0;        /* ⬅️ 반드시 지정 */
+  width: 100%;
+  height: 6vh;
+  background: #022B5C;
+  z-index: 10000;
+}
+
+/* 기본 여백/경계로 인한 1px 틈 예방 */
+html, body{
+  margin: 0;
+  padding: 0;
+  border: 0;       /* 드물게 생기는 상단 1px 라인 예방 */
+}
+
+/* (선택) iOS 노치 대응: 내용은 안전영역만 띄우고 헤더는 위에 밀착 */
+@supports (padding-top: env(safe-area-inset-top)) {
+  body { padding-top: 0; }
+}
+
+
+.banner {
+  position: relative;
+  /* 1️⃣ 기본 배경: 부드러운 차가운 그라데이션 */
+  background: linear-gradient(135deg, #cfe3fa  0%, #f9fbff 100%);
+
+  /* 2️⃣ 패턴 추가: 은은한 도트 텍스처 */
+  background-image:
+    radial-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+    linear-gradient(135deg, #f9fbff 0%, #cfe3fa 100%);
+  background-size: 40px 40px, 100% 100%;
+  background-repeat: repeat, no-repeat;
+  background-blend-mode: normal;
+  overflow: hidden; /* 오버레이 정리를 위한 안정장치 */
+}
+
+/* 3️⃣ 빛의 흐름(overlay) */
+.banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 30% 50%,
+    rgba(255, 200, 150, 0.15),
+    transparent 60%
+  );
+  z-index: 0;
+}
+
+/* 콘텐츠가 배경 위로 올라오도록 */
+.banner_text,
+.portrait {
+  position: relative;
+  z-index: 1;
+}
