@@ -1,0 +1,1249 @@
+*{
+	margin: 0;
+	padding: 0;
+}  
+
+:root { --primary:#022B5C; --active:#9FC5E8; }
+
+main{
+ background-color: #fafafa; 
+}
+
+body.modal-open {
+  overflow: hidden; /* 모달 열릴 때 배경 스크롤 방지 */
+}
+
+a{
+    color: inherit;
+    text-decoration: none; 
+}
+
+img {
+    width : 100% ; 
+    height: 100% ;  
+    border-radius: 100% ;
+}
+
+li{
+    list-style: none;  
+}    
+
+.section_title {
+    width:100%; 
+    max-width:1120px ; 
+    margin: 0 auto;   
+    height : 62px; 
+    display:flex;     
+    justify-content: center; 
+    align-items: center;
+    gap : 12px ; 
+       
+}
+
+.section_title h2 {
+    font-size: 4.8rem; 
+    line-height: 4.8rem;
+}
+
+.icon {
+    font-size: 4.8rem ;
+    line-height: 4.8rem;  
+}     
+
+
+
+/* *================ CSS for header================*  */
+
+.h_wrap{
+    position : fixed ; 
+    width : 100% ;    
+    height : 6vh ; 
+    background-color: #022B5c ; 
+    z-index: 10000;
+     background: #022B5C; 
+    }
+
+
+
+
+.h_inner {
+    width : 100% ; 
+    max-width : 1120px ; 
+    height : 100% ;  
+    background-color:  #022B5c ; 
+    margin: auto ;    
+}   
+
+ul.menu{    
+    display: flex ; 
+    height : 100% ;  
+    justify-content: space-between ;  
+    align-items: center ;  
+  
+}
+
+ul.menu li { 
+    display: flex;  /* 세로 중앙 정렬 */
+    list-style: none;
+    align-items: center ;  
+    height : 100% ;     
+      color : #fff; 
+  }  
+
+ul.menu li h5 {
+    font-weight: 600 ;
+}
+
+
+
+:root { --primary:#022B5C; --active:#9FC5E8; }
+
+/* 헤더 고정 시 섹션 앵커 보정 */
+section { scroll-margin-top: calc(var(--header-h, 80px) + 12px); }
+
+.menu a h5 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: inherit;   /* a의 색상 상속 */
+  transition: color 0.3s ease;
+}
+
+.menu a:hover h5,
+.menu a.active h5 {
+  color: #9FC5E8;   
+  font-size: 2.4rem;
+}
+
+
+
+/* **=========CSS for banner ===========** */ 
+
+.banner {
+    width : 100% ;  
+    height : 60vh ;    
+}
+
+.banner_inner {
+     width : 100% ;  
+     max-width : 1920px ; 
+     margin : auto ; 
+    height : 60vh ;     /* 56vh = 대략 600px */
+    border : 1px solid green ; 
+    top : 80px ;     
+    background: #1d6baf;
+} 
+
+
+
+/* **=========CSS for about ===========** */  
+
+section.about {
+    width : 100% ;  
+    min-height : 100vh ;   
+    height : auto ; 
+    padding-top : 7vh ;   
+    text-align: center;
+    overflow: hidden ;
+} 
+
+.about_inner {  
+    width: 90%;
+    height: 90%;
+    max-width: 1280px;
+    margin: 20px auto 0 ;   
+    padding: auto; 
+    padding-top : 20px ; 
+    overflow: hidden ;   
+} 
+
+
+.about_inner{
+    display: grid;              
+    grid-template-columns: 1fr; /* 1열 */
+    grid-template-rows: 1fr 1fr;        /* 2행 */
+    gap: 20px;                     
+} 
+
+.cv_box{    
+    height : 90% ; 
+    justify-content: flex-start ;  
+    padding : 20px ;  
+    text-align: left;
+    overflow: hidden ;  
+    border:none ; 
+    border-bottom: 1px solid #c6cdd4;     
+}
+
+
+.cv_box {
+    display: grid;              /* 그리드 레이아웃 적용 */
+    grid-template-columns: 1fr 1fr 1fr; /* 3열 */
+    grid-template-rows: 1fr;        /* 1행 */
+    gap: 20px; 
+    display : flex ; 
+    justify-content: space-between;   
+   
+} 
+
+.text_box {
+      width : 45% ;    
+      height : 90% ;  
+      line-height: 42px ;  
+             
+} 
+
+.profile{  
+       width : 60% ; 
+       height : 100% ; 
+       margin : auto ; 
+       margin-left: 20px ; 
+       padding-left: 40px; 
+    }
+
+.profile h4 {
+    font-weight : 600 ; 
+}
+
+.rs_box {
+    width: 45%; 
+    height: 90%;
+    display: grid;                  /* 그리드 레이아웃 적용 */
+    grid-template-columns: 1fr;     /* 1열 */
+    grid-template-rows: 1fr 1fr;    /* 2행 */
+    gap: 16px;                   /* 행 사이 간격 (원하는 값으로 조정) */ 
+    }  
+
+
+
+
+ /* .rectang01: 1행 2열 그리드 */
+.rectang01 {
+  width: 100%; 
+  height : 100% ;   
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 1rem;
+  align-items: center;
+  justify-items: stretch;
+ /*  background-color: #f7f3eb;   */  /* 베이지색 */
+    }  
+
+
+
+
+.resimg, .gitimg { 
+    width : 140px ; 
+    height : 140px ;             
+}
+
+
+.resimg {
+    background-image: url(../images/resimg01.png); 
+     background-size: cover; /* 또는 contain */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gitimg {
+    background-image: url(../images/gitimg01.png); 
+     background-size: cover; /* 또는 contain */
+  background-position: center;
+  background-repeat: no-repeat; 
+}
+
+ 
+
+
+.resimg h4, 
+.gitimg h4 {
+    color : #022B5C; 
+    font-weight : 1000 ; 
+    text-align: center; 
+    align-items: center; 
+}
+
+.restext{
+  text-align: center ; 
+  line-height : 32px ; 
+}
+
+.restext h5 
+  {
+    color : #022B5C;  
+  }
+
+
+
+
+
+.blog_box {
+    width:350px ;   
+    font-size: 2.4rem ; 
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    line-height: 3.6rem ;  
+    color : #ff785a; 
+} 
+
+
+   
+.cando_box{  
+    height : 90% ;  
+    overflow: hidden ; 
+    padding-top : 20px ; 
+    border: none ; 
+    border-bottom: 1px solid #c6cdd4; 
+} 
+
+
+.grid {
+    width : 100% ; 
+    height : 100%  ;      
+}
+
+.able_title {
+    font-weight : 600 ; 
+}
+
+.grid_4x { 
+  height: 80%; 
+  display: grid;       
+  grid-template-columns: repeat(5, 1fr);    
+  gap: 16px;     
+  padding: 16px;  
+  align-items: center;     
+  justify-items: center;   
+}
+
+.grid_4x .able {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+} 
+
+/* circle 기본형 */
+.circle {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  overflow: hidden; 
+  font-size: 1.8rem; 
+  /* background: #9fc5eb ;  */
+  overflow: visible; /* ::after 그림자가 보이도록 */  
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.08),    /* 바닥면 그림자 */
+    inset 0 1px 2px rgba(255, 255, 255, 0.3); /* 윗면 반사광 */ 
+    color : #fff; 
+    font-weight: 1000 ;  
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;  
+}
+
+
+
+.circle:hover {
+  box-shadow:
+    inset 0 3px 6px rgba(0, 0, 0, 0.25),       /* 내부 음영 */
+    inset 0 -2px 4px rgba(255, 255, 255, 0.15),/* 아래쪽 하이라이트 */
+    0 8px 18px rgba(2, 43, 92, 0.45);          /* 외부 그림자 (부드럽게 떠오름) */  
+}
+
+
+.circle_mid {
+    position: relative;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  overflow: hidden; 
+  /* background: #9fc5eb ;  */
+  overflow: visible; /* ::after 그림자가 보이도록 */  
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.08),    /* 바닥면 그림자 */
+    inset 0 1px 2px rgba(255, 255, 255, 0.3); /* 윗면 반사광 */ 
+    color : #000; 
+    font-weight: 1000 ; 
+    font-size: 1.8rem;  
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; 
+}
+
+
+.circle_mid {
+  position: relative;
+  overflow: hidden;
+}
+
+.circle_mid::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%);
+  transform: translateX(-100%);
+  animation: shimmer 3s infinite linear;
+}
+@keyframes shimmer {
+  100% { transform: translateX(100%); }
+}
+
+
+
+
+
+
+
+
+
+
+
+ 
+.resimg, .gitimg { 
+    width : 140px ; 
+    height : 140px ;   
+          
+}
+
+
+
+.codimg {
+    background-image: url(../images/codimg.png);  
+    background-repeat: no-repeat;             
+} 
+
+
+.webimg {
+    background-image: url(../images/webimg01.png);  
+    background-repeat: no-repeat;      
+}
+
+.appimg {
+    background-image: url(../images/appimg01.png);  
+    background-repeat: no-repeat;  
+}
+
+.uximg {
+    background-image: url(../images/uximg01.png);  
+    background-repeat: no-repeat;  
+}
+
+
+.grapimg {
+    background-image: url(../images/uximg01.png);  
+    background-repeat: no-repeat;   
+}
+
+
+
+
+
+
+
+ 
+
+
+
+/* **=======CSS for portfolio ======** */
+
+section.portfolio {
+    width : 100% ;  
+    min-height : 100vh ; 
+    height :auto  ;  /* 수정금지 */   
+    padding-top : 7vh ;    
+    text-align: center;
+}
+
+.about h2,
+.portfolio h2, 
+.skills h2,
+.contact h2 {
+    font-size: 5.6rem ;
+}  /* 섹션 제목 */
+
+.des_title h3 {
+    font-size: 3.6rem ;  
+   font-family: 'Pretendard', sans-serif;
+    line-height: 62px ;
+    margin-top: 40px ; 
+}  /* 프로젝트 제목 */
+
+
+
+.portfolio_inner{
+    width : 100% ; 
+    max-width : 1280px ; 
+    height : 100% ; 
+    margin : auto ; 
+}
+
+
+
+
+.project{
+    width : 100% ; 
+    max-width: 1280px ;  
+    min-height: 25vh ; 
+    margin: 40px auto 20px ; 
+    overflow: visible;  
+}
+
+
+
+.project01, 
+.project03 {
+    width : 100% ; 
+    min-height : auto  ;   
+  /*   background-color: rgb(83, 155, 177) ; */  
+   border-bottom : 1px solid #767676 ;  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 2열 */
+    grid-template-rows: 1fr;        /* 1행 */
+    gap: 20px;   
+    box-sizing: border-box;     
+    margin : auto ;  
+    padding-left: 20px;    
+    border-bottom: 1px solid #c6cdd4; 
+}
+
+.project02{
+    width : 100% ; 
+    min-height : auto ;   
+  /*   background-color: rgb(83, 155, 177) ; */  
+   border-bottom : 1px solid #767676 ;  
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2열 */
+    grid-template-rows: 1fr;        /* 1행 */
+    gap: 20px;   
+    box-sizing: border-box;     
+    margin : auto ;  
+    padding-left: 20px;         
+    border-bottom: 1px solid #c6cdd4;  
+}
+
+
+
+
+
+
+
+
+.circle_big { 
+    width : 200px ; 
+    height : 200px ; 
+    margin-left: 20px;  
+    border-radius: 100% ;
+    background-color: #022B5c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color : white ;   
+}
+
+  
+
+
+.big01 {
+    background-image: url(../images/dptimg01.png); 
+    background-repeat: no-repeat;
+    object-fit: fill ;  
+   box-shadow: 
+    inset 0 3px 6px rgba(0, 0, 0, 0.25),         /* 내부 음영: 눌려보이는 깊이감 */
+    inset 0 -2px 4px rgba(255, 255, 255, 0.15),  /* 내부 하이라이트 */
+    0 6px 12px rgba(2, 43, 92, 0.45);             /* 외부 그림자: 입체감 강조 */
+}
+
+.big02 {
+    background-image: url(../images/dptimg02.png); 
+    background-repeat: no-repeat;
+    object-fit: fill ;  
+   box-shadow: 
+    inset 0 3px 6px rgba(0, 0, 0, 0.25),         /* 내부 음영: 눌려보이는 깊이감 */
+    inset 0 -2px 4px rgba(255, 255, 255, 0.15),  /* 내부 하이라이트 */
+    0 6px 12px rgba(2, 43, 92, 0.45);             /* 외부 그림자: 입체감 강조 */
+}
+
+.big03 {
+    background-image: url(../images/hotelimg01.png); 
+    background-repeat: no-repeat;
+    object-fit: fill ;  
+   box-shadow: 
+    inset 0 3px 6px rgba(0, 0, 0, 0.25),         /* 내부 음영: 눌려보이는 깊이감 */
+    inset 0 -2px 4px rgba(255, 255, 255, 0.15),  /* 내부 하이라이트 */
+    0 6px 12px rgba(2, 43, 92, 0.45);             /* 외부 그림자: 입체감 강조 */  
+}
+
+.big04 {
+    background-image: url(../images/hotelimg02.png); 
+    background-repeat: no-repeat;
+    object-fit: fill ;  
+   box-shadow: 
+    inset 0 3px 6px rgba(0, 0, 0, 0.25),         /* 내부 음영: 눌려보이는 깊이감 */
+    inset 0 -2px 4px rgba(255, 255, 255, 0.15),  /* 내부 하이라이트 */
+    0 6px 12px rgba(2, 43, 92, 0.45);             /* 외부 그림자: 입체감 강조 */  
+}
+
+
+
+ /* .circle_big:hover {
+  transform: rotate(200deg) scale(1.08);
+  filter: brightness(1.1) saturate(1.2);
+  transition: all 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}  */
+
+
+
+.des {   
+    height : 100% ; 
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 400 ;       
+} 
+
+.des_title h3 {
+    margin-top: 60px ;
+}
+
+.des_text {   
+    display: flex ;
+    height : 100% ; 
+    font-size: 1.8rem;   
+    line-height: 3.6rem;    
+    text-align : left ;   
+    align-items: flex-end;   
+}  
+
+
+
+.des_text p {
+    margin-top : 20px ; 
+    margin-bottom: 20px ; 
+}
+
+
+.clip_box {
+    width : 500px ; 
+    height : auto ;   
+    background-color: #f5f5f5 ; 
+}
+
+.clip_box video {
+    width : 100% ; 
+    height : 100% ; 
+}
+
+
+
+.video_frame {
+  position: relative;
+/*   display: inline-block; */ /* 필요 시 inline-block 유지 */
+}
+
+.video_box {
+  display: inline-block;
+}
+
+.caption {
+  position: absolute;
+  top: 40px;          /* 영상 상단 기준 바깥쪽 위치 */
+  right: 20px;            /* 오른쪽 끝 정렬 */
+  font-size: 1.3rem;
+  color: #ff785a ; 
+  font-weight: 800;
+/*   background: #726b6b; */    /* 배경을 주면 가독성 좋아짐 */
+  padding: 4px 8px;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1); 
+  
+}
+
+
+/* ** CSS for modal**  */   
+
+
+
+
+
+
+
+
+
+.resimg, 
+.gitimg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.resimg h4, 
+.gitimg h4 {
+    color : #fff; 
+    font-weight : 1000 ; 
+    text-align: center; 
+    align-items: center; 
+}
+
+.restext h5 
+  {
+    color : #022B5C;  
+  }
+
+
+
+
+
+.blog_box {
+    width:350px ;   
+    font-size: 2.4rem ; 
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    line-height: 3.6rem ;  
+    color : #ff785a; 
+} 
+
+
+   
+.cando_box{  
+    height : 90% ;  
+    overflow: hidden ; 
+    padding-top : 20px ; 
+    border: none ; 
+    border-bottom: 1px solid #c6cdd4; 
+} 
+
+
+.grid {
+    width : 100% ; 
+    height : 100%  ;      
+}
+
+.able_title {
+    font-weight : 600 ; 
+}
+
+.grid_4x { 
+  height: 80%; 
+  display: grid;       
+  grid-template-columns: repeat(5, 1fr);    
+  gap: 16px;     
+  padding: 16px;  
+  align-items: center;     
+  justify-items: center;   
+}
+
+.grid_4x .able {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+} 
+
+/* circle 기본형 */
+.circle {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  overflow: hidden; 
+  font-size: 1.8rem; 
+  /* background: #9fc5eb ;  */
+  overflow: visible; /* ::after 그림자가 보이도록 */  
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.08),    /* 바닥면 그림자 */
+    inset 0 1px 2px rgba(255, 255, 255, 0.3); /* 윗면 반사광 */ 
+    color : #fff; 
+    font-weight: 1000 ;  
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;  
+}
+
+
+
+.circle:hover {
+  box-shadow:
+    inset 0 3px 6px rgba(0, 0, 0, 0.25),       /* 내부 음영 */
+    inset 0 -2px 4px rgba(255, 255, 255, 0.15),/* 아래쪽 하이라이트 */
+    0 8px 18px rgba(2, 43, 92, 0.45);          /* 외부 그림자 (부드럽게 떠오름) */  
+}
+
+
+.circle_mid {
+    position: relative;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  overflow: hidden; 
+  /* background: #9fc5eb ;  */
+  overflow: visible; /* ::after 그림자가 보이도록 */  
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.08),    /* 바닥면 그림자 */
+    inset 0 1px 2px rgba(255, 255, 255, 0.3); /* 윗면 반사광 */ 
+    color : #000; 
+    font-weight: 1000 ; 
+    font-size: 1.8rem;  
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; 
+}
+
+
+.circle_mid {
+  position: relative;
+  overflow: hidden;
+}
+
+.circle_mid::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%);
+  transform: translateX(-100%);
+  animation: shimmer 3s infinite linear;
+}
+@keyframes shimmer {
+  100% { transform: translateX(100%); }
+}
+
+
+
+
+
+
+.resimg, .gitimg { 
+    width : 140px ; 
+    height : 140px ;   
+          
+}
+
+
+
+.codimg {
+    background-image: url(../images/codimg.png);  
+    background-repeat: no-repeat;             
+} 
+
+
+.webimg {
+    background-image: url(../images/webimg01.png);  
+    background-repeat: no-repeat;      
+}
+
+.appimg {
+    background-image: url(../images/appimg01.png);  
+    background-repeat: no-repeat;  
+}
+
+.uximg {
+    background-image: url(../images/uximg01.png);  
+    background-repeat: no-repeat;  
+}
+
+
+.grapimg {
+    background-image: url(../images/uximg01.png);  
+    background-repeat: no-repeat;   
+}
+
+
+
+
+
+
+
+ 
+
+/* **=======CSS for portfolio ======** */
+
+section.portfolio {
+    width : 100% ;  
+    min-height : 100vh ; 
+    height :auto  ;  /* 수정금지 */   
+    padding-top : 7vh ;    
+    text-align: center;
+}
+
+.about h2,
+.portfolio h2, 
+.skills h2,
+.contact h2 {
+    font-size: 5.6rem ;
+}  /* 섹션 제목 */
+
+.des_title h3 {
+    font-size: 3.6rem ;  
+   font-family: 'Pretendard', sans-serif;
+    line-height: 62px ;
+    margin-top: 40px ; 
+}  /* 프로젝트 제목 */
+
+
+
+.portfolio_inner{
+    width : 100% ; 
+    max-width : 1280px ; 
+    height : 100% ; 
+    margin : auto ; 
+}
+
+
+
+
+.project{
+    width : 100% ; 
+    max-width: 1280px ;  
+    min-height: 25vh ; 
+    margin: 40px auto 20px ; 
+    overflow: visible;  
+}
+
+
+
+.project01, 
+.project03 {
+    width : 100% ; 
+    min-height : auto  ;   
+  /*   background-color: rgb(83, 155, 177) ; */  
+   border-bottom : 1px solid #767676 ;  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 2열 */
+    grid-template-rows: 1fr;        /* 1행 */
+    gap: 20px;   
+    box-sizing: border-box;     
+    margin : auto ;  
+    padding-left: 20px;    
+    border-bottom: 1px solid #c6cdd4; 
+}
+
+.project02{
+    width : 100% ; 
+    min-height : auto ;   
+  /*   background-color: rgb(83, 155, 177) ; */  
+   border-bottom : 1px solid #767676 ;  
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2열 */
+    grid-template-rows: 1fr;        /* 1행 */
+    gap: 20px;   
+    box-sizing: border-box;     
+    margin : auto ;  
+    padding-left: 20px;         
+    border-bottom: 1px solid #c6cdd4;  
+}
+
+
+
+
+
+
+
+
+.circle_big { 
+    width : 200px ; 
+    height : 200px ; 
+    margin-left: 20px;  
+    border-radius: 100% ;
+    background-color: #022B5c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color : white ;   
+}
+
+  
+
+
+.big01 {
+    background-image: url(../images/dptimg01.png); 
+    background-repeat: no-repeat;
+    object-fit: fill ;  
+   box-shadow: 
+    inset 0 3px 6px rgba(0, 0, 0, 0.25),         /* 내부 음영: 눌려보이는 깊이감 */
+    inset 0 -2px 4px rgba(255, 255, 255, 0.15),  /* 내부 하이라이트 */
+    0 6px 12px rgba(2, 43, 92, 0.45);             /* 외부 그림자: 입체감 강조 */
+}
+
+.big02 {
+    background-image: url(../images/dptimg02.png); 
+    background-repeat: no-repeat;
+    object-fit: fill ;  
+   box-shadow: 
+    inset 0 3px 6px rgba(0, 0, 0, 0.25),         /* 내부 음영: 눌려보이는 깊이감 */
+    inset 0 -2px 4px rgba(255, 255, 255, 0.15),  /* 내부 하이라이트 */
+    0 6px 12px rgba(2, 43, 92, 0.45);             /* 외부 그림자: 입체감 강조 */
+}
+
+.big03 {
+    background-image: url(../images/hotelimg01.png); 
+    background-repeat: no-repeat;
+    object-fit: fill ;  
+   box-shadow: 
+    inset 0 3px 6px rgba(0, 0, 0, 0.25),         /* 내부 음영: 눌려보이는 깊이감 */
+    inset 0 -2px 4px rgba(255, 255, 255, 0.15),  /* 내부 하이라이트 */
+    0 6px 12px rgba(2, 43, 92, 0.45);             /* 외부 그림자: 입체감 강조 */  
+}
+
+.big04 {
+    background-image: url(../images/hotelimg02.png); 
+    background-repeat: no-repeat;
+    object-fit: fill ;  
+   box-shadow: 
+    inset 0 3px 6px rgba(0, 0, 0, 0.25),         /* 내부 음영: 눌려보이는 깊이감 */
+    inset 0 -2px 4px rgba(255, 255, 255, 0.15),  /* 내부 하이라이트 */
+    0 6px 12px rgba(2, 43, 92, 0.45);             /* 외부 그림자: 입체감 강조 */  
+}
+
+
+
+ /* .circle_big:hover {
+  transform: rotate(200deg) scale(1.08);
+  filter: brightness(1.1) saturate(1.2);
+  transition: all 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}  */
+
+
+
+.des {   
+    height : 100% ; 
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 400 ;       
+} 
+
+.des_title h3 {
+    margin-top: 60px ;
+}
+
+.des_text {   
+    display: flex ;
+    height : 100% ; 
+    font-size: 1.8rem;   
+    line-height: 3.6rem;    
+    text-align : left ;   
+    align-items: flex-end;   
+}  
+
+
+
+.des_text p {
+    margin-top : 20px ; 
+    margin-bottom: 20px ; 
+}
+
+
+.clip_box {
+    width : 500px ; 
+    height : auto ;   
+    background-color: #f5f5f5 ; 
+}
+
+.clip_box video {
+    width : 100% ; 
+    height : 100% ; 
+}
+
+
+
+.video_frame {
+  position: relative;
+/*   display: inline-block; */ /* 필요 시 inline-block 유지 */
+}
+
+.video_box {
+  display: inline-block;
+}
+
+.caption {
+  position: absolute;
+  top: 40px;          /* 영상 상단 기준 바깥쪽 위치 */
+  right: 20px;            /* 오른쪽 끝 정렬 */
+  font-size: 1.3rem;
+  color: #ff785a ; 
+  font-weight: 800;
+/*   background: #726b6b; */    /* 배경을 주면 가독성 좋아짐 */
+  padding: 4px 8px;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1); 
+  
+}
+
+
+/* ** CSS for modal**  */   
+
+
+
+
+
+
+
+
+
+/* 
+========= */
+
+
+ section.skills{
+    width : 100% ;  
+    min-height : 56vh ;   
+    height : auto ; 
+    padding-top : 7vh ;   
+    text-align: center;   
+ }  
+
+.skills_inner {
+    width: 100%;
+    max-width: 1280px;
+    margin: auto; 
+    border: 1px solid #1d6baf;  
+    min-height: 56vh;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 2열 */
+    grid-template-rows: 1fr;        /* 1행 */
+    gap: 40px; 
+    padding-top: 40px ;
+}
+
+
+.progress {
+    width : 100% ; 
+    height : auto ;  
+    border: 1px solid #af1d35;   
+    padding-top: 40px ;      
+}
+
+
+.single_box {
+  width: 70%;
+  margin: 60px auto;
+  display: grid;
+  grid-template-columns: 1fr;
+   grid-template-rows: 4fr ;  
+  gap: 60px;
+  font-family: 'Pretendard', sans-serif;
+}
+
+.singles {
+  position: relative;
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #022b5c; 
+  text-align : left ; 
+}
+
+.singles span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.bar {
+  background: #9FC5E8; 
+  border-radius: 20px;
+  height: 32px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.15);
+}
+
+.fill {
+  height: 100%;
+  border-radius: 20px 0 0 20px;
+  background: #022B5C;
+  width: 0%;
+  transition: width 1.5s ease-in-out;
+}
+
+
+.skill_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.percent {
+  font-weight: 500;
+  font-size: 2.4rem;
+  color: #555;
+}
+
+
+
+
+
+.tools{
+  width : 100% ; 
+    height : auto ;  
+    border: 1px solid #af1d35;   
+    padding-top: 40px ;    
+
+}
+
+
+
+/* **=======CSS for contacts ======** */
+
+ section.contact {
+    width : 100% ;  
+    min-height : 36vh ;   
+    height : auto ; 
+    text-align: center; 
+    padding-top :7vh;       
+ }
+
+ .contact_inner {
+    width: 100% ; 
+    max-width: 1280px ;
+    min-height: 36vh ;
+    margin: auto; 
+    background-color: #e6e9ec;    
+    padding: 20px ; 
+    justify-content: justify ;
+ } 
+
+ .contact_inner ul {
+    display : flex ; 
+    justify-content: space-evenly ; 
+    list-style: none ;
+ }
+
+
+
+ .con_box{
+    width : 12vh ; 
+    height : 12vh ; 
+    border-radius: 100% ;
+    background-color: #27b86f; 
+ } 
+
+
+
+
+/* **======** */
+footer {
+    width : 100% ;  
+    min-height :10vh ;   
+    height : auto ; 
+    background-color: rgb(146, 212, 40) ; 
+    margin : auto ; 
+    justify-content: center; 
+    text-align : center ; 
+    font-size: 3.2rem ;
+    align-items: center;
+}
+
+/* .rectang01: 1행 2열 그리드 */
+.rectang01 {
+	display: grid;
+	grid-template-columns: 1fr 1fr; /* 2열 */
+	grid-template-rows: 1fr; /* 1행 */
+	gap: 1rem;
+	align-items: center;
+	justify-items: stretch;
+}
+
+
+
