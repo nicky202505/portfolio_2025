@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>portfolio dark</title>
 
-  <!-- Font Awesome: 유효한 CDN 버전으로 교체 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkfG4Z6dkhOCi/hpQcK1cUwBf6PfZ6p7x0rGq9WsoXH4GJ2G4XGx+7aYg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
   <link rel="stylesheet" href="./css/modal.css"/>
@@ -42,14 +41,21 @@
 <section class="banner">
   <div class="banner_inner">
     <div class="banner_text">
-      <h2>디자인부터 코딩까지</h2>
-      <h2>Front-End Runner</h2>
-      <h2>장현미입니다</h2>
-      
+      <div class="slogan">
+        <h2>디자인부터 코딩까지</h2>
+        <h2>Front-End Runner</h2>
+        <h2>장현미입니다</h2>
+      </div>
+      <div class="res_button">                           
+              <button class="resume"><a href="resume.html" target="_blank">이력서</a></button>
+              <button class="github"><a href="https://github.com/nicky202505">GitHub</a></button>         
+
+      </div>          
     </div>
     <div class="portrait">
-      <img src="images/apple.png" alt="">
+      <img src="images/jhm_side_02.png" alt="">
     </div>
+    
         
   </div>
 </section>
@@ -420,15 +426,27 @@
 
     <!-- Contact -->
     <section class="contact" id="contact">
-      <div class="icon"><i class="fa-solid fa-briefcase" aria-hidden="true"></i></div>
+      <div class="icon"></div>
       <div><h2>CONTACT</h2></div>
-      <div class="contact_inner">
+      <div class="contact_inner">  
         <ul>
-          <li><div class="con_box"><img src="images/dummy01.jpg" alt="" /></div></li>
-          <li><div class="con_box"><img src="images/dummy01.jpg" alt="" /></div></li>
-          <li><div class="con_box"><img src="images/dummy01.jpg" alt="" /></div></li>
-          <li><div class="con_box"><img src="images/dummy01.jpg" alt="" /></div></li>
-          <li><div class="con_box"><img src="images/dummy01.jpg" alt="" /></div></li>
+          
+          <li>
+            <div class="con_box">
+            <i class="fa-solid fa-phone"></i>
+            <h5 class="bold">phone number</h5>
+            <h5 class="bold">010-3471-1172 </h5>          
+          </div>
+        </li>         
+          <li>
+            <div class="con_box">
+           <i class="fa-solid fa-envelope"></i></i>
+            <h5 class="bold">E-Mail</h5>
+            <h5 class="bold">nicolejang07@gmail.com </h5>          
+           </div>
+          
+          </li>
+
         </ul>
       </div>
     </section>
