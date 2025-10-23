@@ -15,7 +15,6 @@ button.digging {
   color:  #ff785a; 
   font-weight: 800 ;
   line-height: 2.4rem;        
-  font-family: 'Pretendard', sans-serif;   
 }   /* 버튼 기본 스타일 */ 
 
 button.digging:hover {
@@ -46,7 +45,7 @@ button.github {
   font-weight: 800;
   color: #ff785a ; 
   background: transparent;
-  border-radius: 6px;  
+  border-radius: 4px;  
   gap: 100px ; 
 }
 
@@ -73,9 +72,8 @@ button.github:hover  {
    color:  #ff785a; 
    border: 1px solid #ff785a;
   font-weight: 500 ;
-  line-height: 2.4rem;        
-  font-family: 'Pretendard', sans-serif;  
-    float: right;           /* 내부 콘텐츠 기준으로 오른쪽 정렬 */
+  line-height: 2.4rem;           
+  float: right;           /* 내부 콘텐츠 기준으로 오른쪽 정렬 */
   margin-right: 0;        /* 혹시 여백이 있을 경우 제거 */
 } 
 
@@ -111,7 +109,7 @@ button.github:hover  {
   font-weight: 800;
   color: #ff785a ; 
   background: transparent;
-  border-radius: 6px;  
+  border-radius: 4px;  
   gap: 100px ; 
 }
 

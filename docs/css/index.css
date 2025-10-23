@@ -248,6 +248,10 @@ section.banner {
     transform: translateX(0);
     animation-delay: 2s; /* 2초 지연 */
   }
+} 
+
+.resume a  {
+  font-family: ;
 }
 
 
@@ -285,7 +289,7 @@ section.about {
 
 button.resume, 
 button.github {
-  height : 3.6rem ;   
+  height : 3.6rem ;    
 }
 
 .cv_box {
@@ -298,7 +302,7 @@ button.github {
 
  .bold{
   font-weight: bold; 
- }
+ } 
 
 .profile01, 
 .profile02, 
@@ -1152,7 +1156,6 @@ section.portfolio {
  }
 
 
-
  .con_box{
     width : 40vh ; 
     height : 12vh ;  
@@ -1169,19 +1172,21 @@ section.portfolio {
   font-weight: 800 ;
  }
 
- 
+
 
 /* **======** */
 footer {
     width : 100% ;  
     min-height :10vh ;   
     height : auto ; 
-    background-color: rgb(146, 212, 40) ; 
+    background-color: #022B5C ; 
     margin : auto ; 
     justify-content: center; 
-    text-align : center ; 
-    font-size: 3.2rem ;
     align-items: center;
+    text-align : center ; 
+    font-size: 2.4rem ; 
+    line-height: 10vh;
+    color : white ;  
 }
 
 /* .rectang01: 1행 2열 그리드 */
