@@ -14,17 +14,19 @@
 
 .pdf_box {
     width : 100% ;  
-    max-width : 40% ; 
+    max-width : 50% ; 
     height : auto ; 
-    margin: auto;
-    border: 1px solid red ;   
+    margin: auto; 
 }
 
 .img_box {
+ 
 }
 
 .download { 
-    margin-top: 60px ; 
+    margin-top: 20px ; 
 }
 
-
+.download p {
+    font-size: 1.8rem;
+}

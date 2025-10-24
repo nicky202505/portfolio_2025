@@ -14,6 +14,51 @@
 }); 
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    const openButtons = document.querySelectorAll('.digging');
+    const closeButtons = document.querySelectorAll('[data-close-modal]');
+    const modals = document.querySelectorAll('.figma-modal-overlay');
+
+    // 1. 버튼 클릭 시 해당 모달 열기
+    openButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const targetId = this.getAttribute('data-modal-target');
+            const targetModal = document.getElementById(targetId);
+            
+            if (targetModal) {
+                targetModal.style.display = 'flex'; // 모달 표시
+            }
+        });
+    });
+
+    // 2. 닫기 버튼 클릭 시 모달 닫기
+    closeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // 가장 가까운 부모 모달 컨테이너를 찾아서 숨김
+            const modal = this.closest('.figma-modal-overlay');
+            if (modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
+    
+    // 3. 모달 외부 영역 클릭 시 모달 닫기
+    modals.forEach(modal => {
+        modal.addEventListener('click', function(event) {
+            // 클릭된 요소가 모달 자체인 경우 (내부 콘텐츠가 아닌 배경을 클릭한 경우)
+            if (event.target === this) {
+                this.style.display = 'none';
+            }
+        });
+    });
+});
+
+
+
+
+
+
+
 function openModalById(modalId) {
   const modal = document.getElementById(modalId);
   if (!modal) return;
