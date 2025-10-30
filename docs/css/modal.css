@@ -26,7 +26,7 @@
   border-radius: 16px;
   background: #fff;
   box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-  overflow-y: auto;      /* 내부만 스크롤 */ 
+  overflow-y: auto;      /* 내부만 스크롤 */   
 }  
 
 .figma-modal-overlay {
@@ -109,4 +109,34 @@
 
 .detail01 {
   text-align: left ;
+}
+
+.close-button {
+  position: absolute;
+  top: 500px;
+  right: -220px;
+  width: 40px;
+  height: 40px;
+   background: rgba(0, 0, 0, 0.8); 
+  color: #ff785a ; 
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px ;
+  z-index: 1002;
+  transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+  background: #022b5c; 
+}
+
+.viewer-area {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
