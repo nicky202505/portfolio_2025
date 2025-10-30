@@ -1,0 +1,112 @@
+/* ** CSS for modal**  */  
+
+
+
+.modal_wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6); /* 어두운 반투명 배경 */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal_content {
+  position: relative; 
+  width: 70%;
+  max-width: 1200px;
+  max-height: 100vh;       /* 내부 높이 제한 (뷰포트 기준) */
+  margin-top: 20px;
+  padding: 30px; 
+  box-sizing: border-box; 
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  overflow-y: auto;      /* 내부만 스크롤 */ 
+}  
+
+.figma-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); 
+    display: flex; /* JavaScript에서 'flex'로 변경되어야 표시됨 */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+    /* display: none; 상태로 시작합니다. */
+}
+
+
+.pro_title {
+  text-align: center ; 
+}
+
+  
+
+.pro_title h3 { 
+    font-family: 'Pretendard', sans-serif; 
+    font-size: 3.6rem ;
+    font-weight: 600; 
+    line-height: 4.2rem ;
+    margin-top: 20px ;
+}  
+
+
+
+.video_box {
+  width: 80%; /* 부모(.modal_content)의 80% */
+  max-width: 600px; /* 너무 커지지 않게 제한 */
+  aspect-ratio: 16 / 9; /* 16:9 비율 자동 계산 */
+  background: #000;
+  margin: 20px auto 0 ;
+  border-radius: px;  
+}
+
+.video_box video {
+    width : 100% ; 
+    height : 100% ; 
+}  
+
+.demo_box {
+  width : 80% ; 
+  max-width: 600px ;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin: 20px auto 0;  
+}
+
+
+
+.desc_box {
+  width: 600px;
+  max-width: 100%; 
+  height : 200px ; 
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;            /* 1열 */
+  grid-template-rows: repeat(4, auto);   /* 4행 */
+  gap: 20px;
+  box-sizing: border-box;  
+  margin-top: 20px ;
+}
+
+.desc_box > * {
+  padding: 12px;
+  box-sizing: border-box;
+  border: 0.5px solid rgba(0,0,0,0.12);
+  border-radius: 4px;
+  background: #fff;
+}
+
+
+.detail01 {
+  text-align: left ;
+}

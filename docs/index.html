@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>portfolio dark</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+
+  <link rel="stylesheet" href="./css/modal.css"/>
+  <link rel="stylesheet" href="./css/font.css"/>
+  <link rel="stylesheet" href="./css/button.css"/>
+  <link rel="stylesheet" href="./css/index.css"/>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>  
+
+
+
+  
+</head>   
+
+<body>
+  <header>
+    <div class="h_wrap">
+      <div class="h_inner">
+        <ul class="menu">
+          <li><a href="index.html"><h5>HOME</h5></a></li>
+          <li><a href="#about"><h5>ABOUT ME</h5></a></li>
+          <li><a href="#portfolio"><h5>PORTFOLIO</h5></a></li>
+          <li><a href="#skills"><h5>SKILLS</h5></a></li>
+          <li><a href="#contact"><h5>CONTACT</h5></a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Banner -->
+<section class="banner">
+  <div class="banner_inner">
+    <div class="banner_text">
+      <div class="slogan">
+        <h2>디자인부터 코딩까지</h2>
+        <h2>Front-End Runner</h2>
+        <h2>장현미입니다</h2>
+      </div>
+      <div class="res_button">
+        <a href="resume.html" target="_blank" class="btn resume">이력서</a>
+        <a href="https://github.com/nicky202505" target="_blank" class="btn github">GitHub</a>
+      </div>          
+
+    </div>
+    <div class="portrait">
+      <img src="images/bannersnap05.png" alt="장현미_사진"> 
+    </div>
+    
+        
+  </div>
+</section>
+    
+
+    <!-- About -->
+    <section class="about" id="about">
+      <div class="section_title">         
+        <div><h2>ABOUT ME</h2></div>
+      </div> 
+        <div class="des_title">
+                <h3>UX/UI 디자이너 &amp; 개발자 장현미입니다. </h3>
+        </div>
+
+      <div class="about_inner">
+       <div class="res_button">
+        <a href="resume.html" target="_blank" class="btn resume">이력서</a>
+        <a href="https://github.com/nicky202505" target="_blank" class="btn github">GitHub</a>
+      </div>  
+        <div class="cv_box"> 
+          <div class="profile01">
+        <h4 class="bold">profile</h4>
+  <h4>이름 _ 장현미</h4>
+  <h4>사는 곳 _ 서울시 동작구</h4>         
+          </div>
+          <div class="profile02">
+         <h4><span class="bold">eduation</span></h4>
+<h4>홍익대학교 독문과 졸업</h4>
+<h4>경희 사이버대학교 시각디자인 전공 (휴학중)</h4>        
+          </div>
+            <div class="profile03">
+                <h4 class="bold">career</h4>
+            <h4>영어 번역가  </h4> 
+            <h4> 상담사 </h4> 
+            </div>           
+          </div> 
+
+        <div class="cando_box">
+          <div class="grid">
+            <h4 class="able_title">WHAT CAN I DO?</h4>
+
+            <div class="grid_4x"> 
+              <div class="able">
+                <div class="circle_mid codimg">
+                    <div class="overlay"></div>
+                  <h4>CODING</h4>
+                </div>
+              </div>
+
+              <div class="able">
+                <div class="circle_mid webimg">
+                      <div class="overlay"></div>
+                  <h4>WEB DESIGN</h4></div>
+              </div>
+
+              <div class="able">
+                <div class="circle_mid appimg">
+                  <div class="overlay"></div>
+                  <h4>APP DESIGN</h4></div>  
+              </div>
+
+              <div class="able">
+                <div class="circle_mid uximg">
+                  <div class="overlay"></div>
+                  <h4>UX/UI</h4></div>
+              </div>
+
+              <div class="able">
+                <div class="circle_mid grapimg">
+                  <div class="overlay"></div>
+                  <h4>GRAPHIC</h4></div>
+              </div>
+            </div> 
+          </div>
+        </div>
+      </div> <!-- about_inner -->
+    </section>
+
+    <!-- Portfolio -->
+    <section class="portfolio" id="portfolio">
+      <div class="portfolio_inner">
+        <div class="section_title">
+          <div><h2>PORTFOLIO</h2></div>
+        </div>
+
+   <!--      **=======project 01 + Modal 01 ==============** -->
+        <div class="des_title">
+          <h3><span class="numbering" id="p01">01.</span> 신세계 백화점 메인페이지 클론 코딩</h3>
+        </div>
+
+        <div class="project">
+          <div class="project01">
+            <div class="circle_big big01">  </div>
+            <div class="circle_big big02"></div> 
+
+            <div class="des">
+              <div class="des_text">
+                <ul>
+                  <li>
+                    <p>
+                      실제 신세계백화점 공식 사이트를 참고하여, 구조·UI·인터랙션을 클론 코딩한 프로젝트입니다.<br />
+                      GSAP 애니메이션, Swiper Slider 등을 활용하여 고급 백화점의 화려하면서도 우아한 무드를 구현했습니다.
+                    </p>
+                  </li>
+                  <li>  <div class="button_box">
+            <button class="digging" data-modal="01">
+  프로젝트 상세 보기 <i class="fa-solid fa-square-arrow-up-right" aria-hidden="true"></i>
+</button>
+                </div></li>
+                </ul>
+              
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal 01 -->
+        <div class="modal_wrap" id="modal01" role="dialog" aria-modal="true" aria-labelledby="modal01_title" hidden>
+          <div class="modal_content">
+            <button class="close_btn" aria-label="닫기">닫기</button>
+
+            <div class="pro_title">
+              <h3 id="modal01_title">신세계 백화점 메인페이지 클론 코딩</h3>
+            </div>
+
+            <div class="video_box">
+              <video src="images/depart.mp4" controls playsinline></video>
+            </div>
+
+            <div class="demo_box">
+              
+              <a href="https://nicky202505.github.io/project03/" target="_blank" rel="noopener" class="live">
+
+                LIVE DEMO <i class="fa-solid fa-square-arrow-up-right" aria-hidden="true"></i>
+              </a>
+              <a href="https://github.com/nicky202505/project03" target="_blank" rel="noopener" class="source">
+                GitHub <i class="fa-solid fa-square-arrow-up-right" aria-hidden="true"></i>
+              </a>
+            </div>
+
+            <div class="desc_box">
+              <div class="detail01">
+                <h6>프로젝트 결과 : 고급 백화점의 화려한 이미지를 구현하고 있는 사이트의 구조와 디자인을 분석하면서 실제 상용 사이트 수준의 구조 설계와 인터랙션 로직을 익혔습니다. 특히 GSAP 애니메이션 타이밍 조절과 반응형 대응을 통해 디자인 완성도를 높이는 경험을 했습니다.</h6>
+              </div>
+              <div class="detail01">
+                <h6>포인트: 비디오 배너와 동적 텍스트 전환 효과 / 헤더 고정 및 스크롤 시 인터랙션 / GSAP 타임라인을 통한 자연스러운 섹션 트랜지션</h6>
+              </div>
+              <div class="detail01">
+                <h6>기술 스택(Tech Stack): HTML5 / CSS6 / JavaScript / GSAP / Swiper / Responsive Design</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+   <!-- ** ======= Project02 + Modal 02 =========**  -->
+
+
+        <!-- Project 02 -->
+        <div class="des_title">
+          <h3><span class="numbering" id="p02">02.</span> 독서관리 앱 UGGBOOKS 기획 및 디자인</h3>
+        </div>
+
+        <div class="project">
+          <div class="project02">  
+            <div class="clip_box">
+         <video id="uggVideo" class="clip_video" playsinline muted autoplay preload="metadata" controls>
+  <source src="images/ugg_final.mp4" type="video/mp4">
+  브라우저가 비디오를 지원하지 않습니다.
+</video>            
+            </div>          
+        
+
+            <div class="des">
+              <div class="des_text">            
+                <ul>
+                  <li>
+                    <p>
+                      독서관리 APP UGGBOOKS를 기획부터 디자인과 프로토타입까지 완성했습니다. <br>독서가와 전문적인 학습자들을 위한 차별화된 독서관리 전문 APP입니다. </p>  
+                  </li>
+                  <li>
+                         <div class="button_box">
+                <button class="digging" data-modal="02">
+  프로젝트 상세 보기 <i class="fa-solid fa-square-arrow-up-right" aria-hidden="true"></i>
+</button>
+               
+                  </div>
+              
+                </ul>
+           
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal 02 -->
+        <div class="modal_wrap" id="modal02" role="dialog" aria-modal="true" aria-labelledby="modal02_title" hidden>
+          <div class="modal_content">
+            <button class="close_btn" aria-label="닫기">닫기</button>
+
+            <div class="pro_title">
+              <h3 id="modal02_title">독서관리 앱 UGGBOOKS 디자인</h3>
+            </div>
+
+            <div class="video_frame">
+              <div class="video_box">  <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="450" src="https://embed.figma.com/proto/DO1aW6AMmMmI3TvT8vlDiE/UX-%EA%B0%9C%EB%B0%9C-%EA%B8%B0%ED%9A%8D%EC%84%9C---%EC%96%B4%EA%B7%B8%EB%B6%81%EC%8A%A4?page-id=182%3A600&node-id=542-1919&p=f&viewport=-2486%2C2892%2C0.56&scaling=scale-down&content-scaling=fixed&starting-point-node-id=542%3A1919&embed-host=share" allowfullscreen></iframe>
+              </div>
+                <p class="caption">&lt;-확대 버튼을 눌러 앱을 실제 사용해 보세요!</p>
+            </div>
+          
+
+            <div class="demo_box">
+                 <button class="digging" data-modal-target="design-modal">
+        디자인 보기 <i class="fa-solid fa-square-arrow-up-right" aria-hidden="true"></i>
+    </button> 
+
+    <button class="digging" data-modal-target="plan-modal">
+        기획서 보기 <i class="fa-solid fa-square-arrow-up-right" aria-hidden="true"></i>  
+    </button>
+            </div>  
+
+
+            <div id="design-modal" class="figma-modal-overlay" style="display: none;">
+    <div class="modal-content">
+        <button class="close-button" data-close-modal> &times; </button>
+        <div class="viewer-area">
+            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1); width: 100%; height: 600px;" 
+                    src="https://embed.figma.com/design/SHBc2P07i1OSeKhpi6G8PS/UGGBOOKS_FInal?node-id=1-5908&embed-host=share" 
+                    allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
+
+<div id="plan-modal" class="figma-modal-overlay" style="display: none;">
+    <div class="modal-content">
+        <button class="close-button" data-close-modal> &times; </button>
+        <div class="viewer-area">
+            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1); width: 100%; height: 600px;" 
+                   
+                    allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
+
+
+           
+
+<!-- =============== -->
+ 
+
+            <div class="desc_box">
+              <div class="detail01">
+                <h6>개발 목표: 기존의 독서 플랫폼이나 일정관리앱과는 달리 개인화된 독서관리를 목표로하여 독서가들의 완독 니즈를 충족하고 연구자들의 체계적인 독서관리를 지원하는 솔루션</h6> 
+              </div>
+              <div class="detail01">
+                <h6>프로젝트 성과: 아이디어에서 출발하여 기획과 디자인 프로토타입에 이르는 과정을 1인 프로젝트로 진행하여 완성 및 마스터하였습니다. 또한경쟁 분석 및 로드맵 설정 비즈니스 기회 탐색까지 향후 실제 앱개발을 위한 토대를 만들었습니다.</h6> 
+              </div>
+              <div class="detail01">              
+                <h6>기술 스택(Tech Stack):Figma/Photoshop/Illustartor/ </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+  <!--      **=======Project03==========** -->
+       
+  <div class="des_title">
+          <h3><span class="numbering" id="p03">03.</span> 신라호텔 반응형 리디자인</h3>
+        </div>
+
+        <div class="project">
+          <div class="project03">
+            <div class="circle_big big03"></div>
+            <div class="circle_big big04"></div>  
+
+            <div class="des">
+              <div class="des_text">      
+                <ul>
+                  <li><p>
+                     신라 호텔 홈페이지의 아름답고 품위있는 디자인에 더하여 태블릿과 모바일에서도 동일하게 사용할 수 있는 3단계 반응형으로 리디자인했습니다.   
+                    </p>  </li>
+                  <li><div class="button_box">
+             <button class="digging" data-modal="03">
+  프로젝트 상세 보기 <i class="fa-solid fa-square-arrow-up-right" aria-hidden="true"></i>
+</button>
+                </div></li> 
+                </ul>      
+                   
+                    </div>              
+                
+          
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal 03 -->
+        <div class="modal_wrap" id="modal03" role="dialog" aria-modal="true" aria-labelledby="modal03_title" hidden>
+          <div class="modal_content">
+            <button class="close_btn" aria-label="닫기">닫기</button>
+
+            <div class="pro_title">
+              <h3 id="modal03_title">신라호텔 반응형 리디자인</h3>
+            </div>
+
+            <section class="video_box">
+              <video src="images/hotel.mp4" autoplay muted playsinline controls></video>
+            </section>
+
+            <div class="demo_box">
+              <a href="https://nicky202505.github.io/project02/" target="_blank" rel="noopener" class="live">
+                LIVE DEMO <i class="fa-solid fa-square-arrow-up-right" aria-hidden="true"></i>
+              </a>
+              <a href="https://github.com/nicky202505/project02" target="_blank" rel="noopener" class="source">
+                GitHub <i class="fa-solid fa-square-arrow-up-right" aria-hidden="true"></i>  
+              </a>
+            </div>
+
+            <div class="desc_box">
+              <div class="detail01">
+                <h6>
+                  프로젝트 결과: Figma로 레이아웃을 설계한 후 코디아라는 자동화 툴을 이용하여 단시간에 HTML 및 CSS 코드로 전환하고 이후 JavaScript 등을 사용한 추가 작업을 통해 동적요소와 반응형을 더하는 방식을 사용했습니다. 디자인 완료 후 기본 코드 생성에 소요되는 시간 5분. 빠른 생성이 필요한 상업용 홍보페이지, 배너, 상세페이지 생산에 매우 적합합니다.
+                </h6>
+              </div>
+              <div class="detail01">
+                <h6>
+                  포인트: 효율적인 기본 레이아웃 생성 / 동적요소와 반응형도 완벽하게 적용 가능 / 자동화를 통해 디자인의 의도와 요소들을 손상 없이 그대로 반영 가능
+                </h6>
+              </div>
+              <div class="detail01">
+                <h6>
+                  기술 스택(Tech Stack): HTML5 / CSS6 / JavaScript / GSAP / Swiper / Responsive Designfabout
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <!-- .portfolio_inner -->
+    </section>
+
+
+
+
+
+    <!-- =============== SKILLS ==== -->
+
+    <!-- Skills -->
+    <section class="skills" id="skills">       
+      <div class="section_title"><h2>SKILLS</h2></div>
+      <div class="skills_inner">
+        <div class="progress">
+          <div class="skill_title">
+            <h3>I'm Experienced In</h3>
+          </div>     
+          <div class="single_box">
+            
+            <div class="singles singles01">
+              <div class="circle" data-percent="90">
+                <svg class="circle-svg" viewBox="0 0 120 120">
+                  <circle class="bg" cx="60" cy="60" r="54"></circle>
+                  <circle class="meter" cx="60" cy="60" r="54"></circle>
+                </svg>
+                <div class="circle-label">
+                  <span class="label">HTML/CSS</span>
+                  <span class="num">90%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="singles singles02">
+              <div class="circle" data-percent="80">
+                <svg class="circle-svg" viewBox="0 0 120 120">
+                  <circle class="bg" cx="60" cy="60" r="54"></circle>
+                  <circle class="meter" cx="60" cy="60" r="54"></circle>
+                </svg>
+                <div class="circle-label">
+                  <span class="label">JavaScript</span>
+                  <span class="num">80%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="singles singles03">
+              <div class="circle" data-percent="90">
+                <svg class="circle-svg" viewBox="0 0 120 120">
+                  <circle class="bg" cx="60" cy="60" r="54"></circle>
+                  <circle class="meter" cx="60" cy="60" r="54"></circle>
+                </svg>
+                <div class="circle-label">
+                  <span class="label">FIGMA</span>
+                  <span class="num">90%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="singles singles04">
+              <div class="circle" data-percent="90">
+                <svg class="circle-svg" viewBox="0 0 120 120">
+                  <circle class="bg" cx="60" cy="60" r="54"></circle>
+                  <circle class="meter" cx="60" cy="60" r="54"></circle>
+                </svg>
+                <div class="circle-label">
+                  <span class="label">Adobe Tools</span>
+                  <span class="num">90%</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+      <div class="icon"></div>
+      <div><h2>CONTACT</h2></div>
+      <div class="contact_inner">  
+        <ul>
+          
+          <li>
+            <div class="con_box">
+            <i class="fa-solid fa-phone"></i>
+            <h5 class="bold">phone number</h5>
+            <h5 class="bold">010-3471-1172 </h5>          
+          </div>
+        </li>         
+          <li>
+            <div class="con_box">
+           <i class="fa-solid fa-envelope"></i>
+            <h5 class="bold">E-Mail</h5>
+            <h5 class="bold">nicolejang07@gmail.com </h5>          
+           </div>
+          
+          </li>
+
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+   © 2025 Jang Hyun-Mi. All rights reserved.
+
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

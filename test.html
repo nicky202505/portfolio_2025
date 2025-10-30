@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+
+<style>
+        .about_right {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.about_btn {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about_btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.9);
+  transition: filter 0.3s ease;
+}
+
+.about_btn span {
+  position: absolute;
+  bottom: 15px;
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  font-size: 1.4rem;
+  padding: 5px 10px;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.about_btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.about_btn:hover span {
+  opacity: 1;
+}
+
+
+ <style>
+
+
+
+ </style>
+
+ 
+
+
+    </style>
+</head>
+<body> 
+
+<div class="about_links">
+  <div class="card">
+    <h4>📄 이력서</h4>
+    <p>프로젝트 중심의 경력 요약서</p>
+    <a href="files/resume.pdf" target="_blank">열기</a> | 
+    <a href="files/resume.pdf" download>다운로드</a>
+  </div>
+
+  <div class="card">
+    <h4>🐙 GitHub</h4>
+    <p>프로젝트 소스코드와 리포지토리</p>
+    <a href="https://github.com/nicky202505" target="_blank">바로가기</a>
+  </div>
+</div>
+
+    
+</body>
+</html>

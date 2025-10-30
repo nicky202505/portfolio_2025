@@ -1,0 +1,108 @@
+.button_box {
+    display: block;
+    margin : auto ; 
+    height : 3.6rem ;  
+    text-align: center; 
+} 
+
+button.digging {
+  background-color: #f7f3eb;
+  width: 90% ; 
+  height: 3.6rem ; 
+  border : none ; 
+  transition: all 0.2s ease; 
+  color:  #ff785a;   
+  font-weight: 600 ; 
+  line-height: 3.6rem;   
+  font-size : 2.0rem     
+}   /* 버튼 기본 스타일 */ 
+
+button.digging:hover {
+   background-color: #022b5c ; 
+   color : white ; 
+  transform: scale(1.1); 
+  border-radius: 4px ;  
+  font-weight: 600; 
+  cursor: pointer;  
+}  
+
+
+
+
+
+
+
+
+.close_btn {
+  width : 80px ; 
+  height : 24px ; 
+  position: sticky;
+  top: 20px;
+  right: 10px;  
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;   
+   color:  #ff785a; 
+   border: 1px solid #ff785a;
+  font-weight: 500 ;
+  line-height: 2.4rem;           
+  float: right;           /* 내부 콘텐츠 기준으로 오른쪽 정렬 */
+  margin-right: 0;        /* 혹시 여백이 있을 경우 제거 */
+} 
+
+
+.close_btn:hover {
+  position: sticky; 
+  font-size: 1.8rem;
+  cursor: pointer; 
+  background-color: #022b5c ; 
+  color : white ;  
+  border-radius: 2px ;  
+  border: none ; 
+  font-weight: 500; 
+  cursor: pointer; 
+}
+ 
+
+
+.demo_box a.live,
+.demo_box a.source {
+  display: inline-block;
+  width: 200px;
+  height: 36px;
+  line-height: 36px;           /* 세로 중앙 정렬 */
+  padding: 0 12px;
+  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #ff785a ; 
+  background: transparent;
+  border-radius: 4px;  
+  gap: 100px ; 
+}
+
+/* hover 스타일 예시 */
+.demo_box a.live:hover,
+.demo_box a.source:hover {
+  background: #022b5c;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+
+
+
+
+
+
+
+
+
+

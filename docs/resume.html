@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이력서 미리보기</title>
+  <style>
+    body {
+      background-color: #f9fafc;
+      font-family: "Pretendard", sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 0;
+    }
+    embed {
+      width: 80%;
+      height: 80vh;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .download-btn {
+      margin-top: 20px;
+      padding: 10px 24px;
+      background-color: #022B5C;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .download-btn:hover {
+      background-color: #9FC5E8;
+      color: #022B5C;
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+<body>
+  <h2>이력서 미리보기</h2>
+  <embed src="https://drive.google.com/file/d/1aBcDeFgHiJKLmnOPqRS/preview" type="application/pdf">
+  <a href="https://drive.google.com/uc?export=download&id=1aBcDeFgHiJKLmnOPqRS">
+    <button class="download-btn">이력서 다운로드</button>
+  </a>
+</body>
+</html>
