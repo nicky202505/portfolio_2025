@@ -64,15 +64,37 @@
   width: 80%; /* 부모(.modal_content)의 80% */
   max-width: 600px; /* 너무 커지지 않게 제한 */
   aspect-ratio: 16 / 9; /* 16:9 비율 자동 계산 */
-  background: #000;
+  background: transparent; /* 검정 배경 제거 */
   margin: 20px auto 0 ;
-  border-radius: px;  
+  border-radius: 4px;
+  overflow: hidden; /* 비디오가 프레임을 벗어나지 않도록 */
 }
 
 .video_box video {
     width : 100% ; 
     height : 100% ; 
+    object-fit: cover; /* 비디오가 프레임에 완전히 맞도록 */
+    border-radius: 8px; 
 }  
+
+/* Modal 03 (신라호텔) video_box 전용 스타일 */
+#modal03 .video_box {
+  width: 90%;
+  max-width: 600px;
+  aspect-ratio: 16 / 9;
+  background: transparent; /* 검정 배경 제거 */
+  margin: 30px auto 0;
+  border-radius: 4px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+
+#modal03 .video_box video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 비디오가 프레임에 완전히 맞도록 */
+  border-radius: 4px;
+}
 
 .demo_box {
   width : 80% ; 
@@ -116,8 +138,7 @@
   top: 500px;
   right: -220px;
   width: 40px;
-  height: 40px;
-   background: rgba(0, 0, 0, 0.8); 
+  height: 40px;  
   color: #ff785a ; 
   border: none;
   cursor: pointer;

@@ -54,8 +54,7 @@ li{
 .h_wrap{
     position : fixed ; 
     width : 100% ;    
-    height : 6vh ; 
-    background-color: #022B5c ; 
+    height : 6vh ;  
     z-index: 10000;
      background: #022B5C; 
     }
@@ -80,11 +79,11 @@ ul.menu{
 }
 
 ul.menu li { 
-    display: flex;  /* 세로 중앙 정렬 */
+    display: flex; 
     list-style: none;
     align-items: center ;  
     height : 100% ;     
-      color : #fff; 
+    color : #fff; 
   }  
 
 ul.menu li h5 {
@@ -93,8 +92,6 @@ ul.menu li h5 {
 
 
 
-:root { --primary:#022B5C; --active:#9FC5E8; }
-
 /* 헤더 고정 시 섹션 앵커 보정 */
 section { scroll-margin-top: calc(var(--header-h, 80px) + 12px); }
 
@@ -102,7 +99,7 @@ section { scroll-margin-top: calc(var(--header-h, 80px) + 12px); }
   margin: 0;
   font-size: 1.6rem;
   font-weight: 600;
-  color: inherit;   /* a의 색상 상속 */
+  color: inherit;   
   transition: color 0.3s ease;
 }
 
@@ -130,7 +127,7 @@ section.banner {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
-  gap: 20px; /* 필요시 조정 */     
+  gap: 20px;      
   padding-top: 30px ;     
 } 
 
@@ -176,7 +173,7 @@ section.banner {
   }
 }
 
-/* 포인트 텍스트(2번째 줄) 전용 */
+/* 배너 텍스트 두번째 줄 */
 .banner_text h2:nth-child(2) {
   background: linear-gradient(90deg, #e6684b, #f6c445, #e6684b);
   background-size: 200%;
@@ -187,7 +184,7 @@ section.banner {
     gradientShift 3s ease-in-out infinite alternate;
 }
 
-/* 그라데이션 이동 */
+/* 그라데이션 */
 @keyframes gradientShift {
   0% { background-position: 0%; }
   100% { background-position: 100%; }
@@ -198,7 +195,7 @@ section.banner {
   opacity: 0;
   transform: translateY(20px);
   animation: resButtonIn 1s ease-out forwards;
-  animation-delay: 1.5s; /* 3초 지연 */
+  animation-delay: 1.5s; 
 }
 
 @keyframes resButtonIn {
@@ -211,7 +208,7 @@ section.banner {
 .portrait {
   display: flex;
   justify-content: center;
-  align-items: center; /* 이 부분을 조절하거나, img에 margin-top을 줍니다 */
+  align-items: center; 
   width: 60%;
   height: auto;
 }
@@ -220,9 +217,8 @@ section.banner {
   width: 80%;
   height: auto;
   display: block;
-  margin: 0 auto; /* 수평 중앙 정렬 유지 */
-  margin-top: 20px; /* ✨ 이 값을 조절하여 사진을 아래로 내릴 수 있습니다. */
-
+  margin: 0 auto; 
+  margin-top: 20px; 
   opacity: 0;
   transform: translateX(40px);
   animation: slideIn 3s ease-out forwards;
@@ -245,9 +241,9 @@ section.banner {
   display: inline-block;
   padding: 6px 6px;
   font-size: 2.4rem;
-  color: #ff7485;           /* 기본 글자색 */
-  background: none;         /* 기본 배경 없음 */
-  border: none;             /* 기본 테두리 없음 */
+  color: #ff7485;           
+  background: none;         
+  border: none;             
   border-radius: 2px;
   text-decoration: none;
   line-height: 2.4rem;
@@ -258,8 +254,8 @@ section.banner {
 /* hover / focus-visible */
 .res_button .btn:hover,
 .res_button .btn:focus-visible {
-  background-color: #022B5C;  /* 남색 배경 */
-  color: #fff;                /* 흰 글자 */
+  background-color: #022B5C;  
+  color: #fff;                
   transform: translateY(-2px);
   transform: scale(1.1);  
 }
@@ -300,7 +296,7 @@ section.about {
   padding: 20px 0;             
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto; /* 또는 생략하고 grid-auto-rows 사용 */
+  grid-template-rows: auto auto; 
   grid-auto-rows: auto;
   gap: 20px;   
 }
@@ -319,7 +315,7 @@ section.about {
   max-width: 1280px;
   display: flex;
   justify-content: space-evenly ;  
-  gap: 20px; /* 필요에 따라 간격 조정 */  
+  gap: 20px;  
   } 
 
  .bold{
@@ -373,9 +369,9 @@ section.about {
   place-items: center;
   overflow: hidden; 
   /* background: #9fc5eb ;  */
-  overflow: visible; /* ::after 그림자가 보이도록 */  
+  overflow: visible;   
   box-shadow:
-    0 2px 6px rgba(0, 0, 0, 0.08); /* 바닥면 그림자 */
+    0 2px 6px rgba(0, 0, 0, 0.08); 
   font-weight: 1000;
   font-size: 1.8rem;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; 
@@ -398,8 +394,8 @@ section.about {
   );
   transform: translateX(-100%);
   animation: shimmer 2s infinite linear;
-  mix-blend-mode: screen; /* 빛이 더 자연스럽게 섞이게 */
-  filter: brightness(1.2)
+  mix-blend-mode: screen; 
+  filter: brightness(1.2) ; 
 }
 
 @keyframes shimmer {
@@ -425,7 +421,7 @@ section.about {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.3); /* 반투명 검정 */
+  background: rgba(0, 0, 0, 0.3); 
   z-index: 1;
 }
 
@@ -474,7 +470,7 @@ section.about {
 section.portfolio {
     width : 100% ;  
     min-height : auto ; 
-    height :auto  ;  /* 수정금지 */   
+    height :auto  ;     
     padding-top : 7.5vh ;     
     text-align: center;
 
@@ -519,10 +515,9 @@ section.portfolio {
 .project03 {
     width : 100% ; 
     min-height : auto  ;    
- /*   border-bottom : 1px solid #767676 ;   */
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* 2열 */
-    grid-template-rows: 1fr;        /* 1행 */
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr;        
     gap: 20px;   
     box-sizing: border-box;     
     margin : auto ;  
@@ -534,11 +529,10 @@ section.portfolio {
 .project02{
     width : 100% ; 
     min-height : auto ;   
-  /*   background-color: rgb(83, 155, 177) ; */  
    border-bottom : 1px solid #767676 ;  
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 2열 */
-    grid-template-rows: 1fr;        /* 1행 */
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr;        
     gap: 20px;   
     box-sizing: border-box;     
     margin : auto ;  
@@ -570,9 +564,9 @@ section.portfolio {
     background-repeat: no-repeat;
     object-fit: fill ;  
    box-shadow: 
-    inset 0 3px 6px rgba(0, 0, 0, 0.25),         /* 내부 음영: 눌려보이는 깊이감 */
-    inset 0 -2px 4px rgba(255, 255, 255, 0.15),  /* 내부 하이라이트 */
-    0 6px 12px rgba(2, 43, 92, 0.45);             /* 외부 그림자: 입체감 강조 */
+    inset 0 3px 6px rgba(0, 0, 0, 0.25),         
+    inset 0 -2px 4px rgba(255, 255, 255, 0.15),  
+    0 6px 12px rgba(2, 43, 92, 0.45);             
 }
 
 .big02 {
@@ -580,9 +574,9 @@ section.portfolio {
     background-repeat: no-repeat;
     object-fit: fill ;  
    box-shadow: 
-    inset 0 3px 6px rgba(0, 0, 0, 0.25),         /* 내부 음영: 눌려보이는 깊이감 */
-    inset 0 -2px 4px rgba(255, 255, 255, 0.15),  /* 내부 하이라이트 */
-    0 6px 12px rgba(2, 43, 92, 0.45);             /* 외부 그림자: 입체감 강조 */
+    inset 0 3px 6px rgba(0, 0, 0, 0.25),         
+    inset 0 -2px 4px rgba(255, 255, 255, 0.15),  
+    0 6px 12px rgba(2, 43, 92, 0.45);             
 }
 
 .big03 {
@@ -590,9 +584,9 @@ section.portfolio {
     background-repeat: no-repeat;
     object-fit: fill ;  
    box-shadow: 
-    inset 0 3px 6px rgba(0, 0, 0, 0.25),         /* 내부 음영: 눌려보이는 깊이감 */
-    inset 0 -2px 4px rgba(255, 255, 255, 0.15),  /* 내부 하이라이트 */
-    0 6px 12px rgba(2, 43, 92, 0.45);             /* 외부 그림자: 입체감 강조 */  
+    inset 0 3px 6px rgba(0, 0, 0, 0.25),         
+    inset 0 -2px 4px rgba(255, 255, 255, 0.15),  
+    0 6px 12px rgba(2, 43, 92, 0.45);               
 }
 
 .big04 {
@@ -600,9 +594,9 @@ section.portfolio {
     background-repeat: no-repeat;
     object-fit: fill ;  
    box-shadow: 
-    inset 0 3px 6px rgba(0, 0, 0, 0.25),         /* 내부 음영: 눌려보이는 깊이감 */
-    inset 0 -2px 4px rgba(255, 255, 255, 0.15),  /* 내부 하이라이트 */
-    0 6px 12px rgba(2, 43, 92, 0.45);             /* 외부 그림자: 입체감 강조 */  
+    inset 0 3px 6px rgba(0, 0, 0, 0.25),         
+    inset 0 -2px 4px rgba(255, 255, 255, 0.15),  
+    0 6px 12px rgba(2, 43, 92, 0.45);               
 }
 
 
@@ -635,11 +629,11 @@ section.portfolio {
 .clip_box {
   position: relative;
   width: 100%;
-  max-width: 1280px; /* 필요시 조정 */
-  aspect-ratio: 16/ 9; /* 원하는 비율 */
+  max-width: 1280px; 
+  aspect-ratio: 16/ 9; 
   overflow: hidden;
   background: none; 
-   background-color: none; /* 혹은 투명하게 none */
+   background-color: none; 
 }
 
 .clip_video {
@@ -647,7 +641,7 @@ section.portfolio {
   top: 0; left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;  /* 여백 없이 꽉 채우기 */
+  object-fit: cover;  
   border: none;
   outline: none;
   background: transparent;   
@@ -658,8 +652,8 @@ section.portfolio {
   width: 600px;
   height: 475px;
   overflow: hidden;
-  margin: 0 auto; /* 가운데 정렬용 */
-  border: none; /* 외곽선 제거 */
+  margin: 0 auto; 
+  border: none; 
   background: transparent;
 }
 
@@ -671,7 +665,7 @@ section.portfolio {
 .video_box iframe {
   width: 100%;
   height: 100%;
-  border: none !important; /* Figma iframe 자체 테두리 제거 */
+  border: none !important; 
   display: block;
   background: transparent;
 }
@@ -679,15 +673,15 @@ section.portfolio {
 
 .caption {
   position: relative;
-  top: -20px;       /* 영상 프레임 위쪽으로 올림 */
-  right: 100px;     /* 프레임 오른쪽 바깥으로 이동 */
+  top: -20px;       
+  right: 100px;     
   font-size: 1.4rem;
   color: #ff785a;
   font-weight: 800;
   padding: 6px 10px;
   border-radius: 6px;
   box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-  white-space: nowrap; /* 한 줄 유지 */
+  white-space: nowrap; 
 }
 
 
@@ -761,8 +755,8 @@ section.portfolio {
   /* background: #9fc5eb ;  */
   overflow: visible; /* ::after 그림자가 보이도록 */  
   box-shadow:
-    0 2px 6px rgba(0, 0, 0, 0.08),    /* 바닥면 그림자 */
-    inset 0 1px 2px rgba(255, 255, 255, 0.3); /* 윗면 반사광 */ 
+    0 2px 6px rgba(0, 0, 0, 0.08),    
+    inset 0 1px 2px rgba(255, 255, 255, 0.3);  
     color : #fff; 
     font-weight: 1000 ;  
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;  
@@ -772,9 +766,9 @@ section.portfolio {
 
 .circle:hover {
   box-shadow:
-    inset 0 3px 6px rgba(0, 0, 0, 0.25),       /* 내부 음영 */
-    inset 0 -2px 4px rgba(255, 255, 255, 0.15),/* 아래쪽 하이라이트 */
-    0 8px 18px rgba(2, 43, 92, 0.45);          /* 외부 그림자 (부드럽게 떠오름) */  
+    inset 0 3px 6px rgba(0, 0, 0, 0.25),     
+    inset 0 -2px 4px rgba(255, 255, 255, 0.15)
+    0 8px 18px rgba(2, 43, 92, 0.45);           
 }
 
 
@@ -789,7 +783,7 @@ section.portfolio {
   /* background: #9fc5eb ;  */
   overflow: visible; /* ::after 그림자가 보이도록 */  
   box-shadow:
-    0 2px 6px rgba(0, 0, 0, 0.08); /* 바닥면 그림자 */
+    0 2px 6px rgba(0, 0, 0, 0.08); 
   font-weight: 1000;
   font-size: 1.8rem;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; 
@@ -851,7 +845,7 @@ section.portfolio {
 .grapimg {
     background-image: url(../images/grapimg.jpg);  
     background-repeat: no-repeat;   
-    background-size: cover; /* 또는 contain, 필요에 따라 */
+    background-size: cover; 
     background-position: center;
 }
 
@@ -862,7 +856,7 @@ section.portfolio {
 section.portfolio {
     width : 100% ;  
     min-height : auto ; 
-    height :auto  ;  /* 수정금지 */   
+    height :auto  ;     
     padding-top : 7vh ;    
     text-align: center;
 }
@@ -921,17 +915,15 @@ section.portfolio {
 
 .project02{
     width : 100% ; 
-    min-height : auto ;   
-  /*   background-color: rgb(83, 155, 177) ; */  
-   border-bottom : 1px solid #767676 ;  
+    min-height : auto ;  
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 2열 */
-    grid-template-rows: 1fr;        /* 1행 */
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr;        
     gap: 20px;   
     box-sizing: border-box;     
     margin : auto ;  
     padding-left: 20px;         
-      padding-bottom: 20px;  /* 👈 추가 */
+      padding-bottom: 20px;  
     border-bottom: 1px solid #c6cdd4;  
 }
 
@@ -962,9 +954,9 @@ section.portfolio {
     background-repeat: no-repeat;
     object-fit: fill ;  
    box-shadow: 
-    inset 0 3px 6px rgba(0, 0, 0, 0.25),         /* 내부 음영: 눌려보이는 깊이감 */
-    inset 0 -2px 4px rgba(255, 255, 255, 0.15),  /* 내부 하이라이트 */
-    0 6px 12px rgba(2, 43, 92, 0.45);             /* 외부 그림자: 입체감 강조 */
+    inset 0 3px 6px rgba(0, 0, 0, 0.25),         
+    inset 0 -2px 4px rgba(255, 255, 255, 0.15),  
+    0 6px 12px rgba(2, 43, 92, 0.45);             
 }
 
 .big02 {
@@ -972,9 +964,9 @@ section.portfolio {
     background-repeat: no-repeat;
     object-fit: fill ;  
    box-shadow: 
-    inset 0 3px 6px rgba(0, 0, 0, 0.25),         /* 내부 음영: 눌려보이는 깊이감 */
-    inset 0 -2px 4px rgba(255, 255, 255, 0.15),  /* 내부 하이라이트 */
-    0 6px 12px rgba(2, 43, 92, 0.45);             /* 외부 그림자: 입체감 강조 */
+    inset 0 3px 6px rgba(0, 0, 0, 0.25),         
+    inset 0 -2px 4px rgba(255, 255, 255, 0.15),  
+    0 6px 12px rgba(2, 43, 92, 0.45);             
 }
 
 .big03 {
@@ -982,9 +974,9 @@ section.portfolio {
     background-repeat: no-repeat;
     object-fit: fill ;  
    box-shadow: 
-    inset 0 3px 6px rgba(0, 0, 0, 0.25),         /* 내부 음영: 눌려보이는 깊이감 */
-    inset 0 -2px 4px rgba(255, 255, 255, 0.15),  /* 내부 하이라이트 */
-    0 6px 12px rgba(2, 43, 92, 0.45);             /* 외부 그림자: 입체감 강조 */  
+    inset 0 3px 6px rgba(0, 0, 0, 0.25),         
+    inset 0 -2px 4px rgba(255, 255, 255, 0.15),  
+    0 6px 12px rgba(2, 43, 92, 0.45);            
 }
 
 .big04 {
@@ -992,9 +984,9 @@ section.portfolio {
     background-repeat: no-repeat;
     object-fit: fill ;  
    box-shadow: 
-    inset 0 3px 6px rgba(0, 0, 0, 0.25),         /* 내부 음영: 눌려보이는 깊이감 */
-    inset 0 -2px 4px rgba(255, 255, 255, 0.15),  /* 내부 하이라이트 */
-    0 6px 12px rgba(2, 43, 92, 0.45);             /* 외부 그림자: 입체감 강조 */  
+    inset 0 3px 6px rgba(0, 0, 0, 0.25),         
+    inset 0 -2px 4px rgba(255, 255, 255, 0.15),  
+    0 6px 12px rgba(2, 43, 92, 0.45);             
 }
 
 
@@ -1047,10 +1039,9 @@ section.portfolio {
 
 
 .video_frame {
-    /* 이 컨테이너를 기준으로 자식 요소(caption)의 위치를 지정 */
     position: relative; 
-    width: 600px; /* iframe의 width와 동일하게 설정 (또는 auto) */
-    margin: 0 auto; /* 중앙 정렬용 */
+    width: 600px; 
+    margin: 0 auto; 
 }
 
 .video_box {
@@ -1058,44 +1049,23 @@ section.portfolio {
 }
 
 .caption {
-    /* 캡션을 절대 위치로 설정하여 video_frame 내에서 자유롭게 움직임 */
-    position: absolute;
-    
-    /* 오른쪽 상단에 배치 */
-    top: 30px;   /* 상단에서 띄우는 거리 */
-    right: 0px; /* 오른쪽에서 띄우는 거리 */
-    
-    /* 텍스트 스타일링 (가독성 향상) */
-/*     background-color: rgba(255, 255, 255, 0.85); /* 배경색을 넣어 텍스트가 잘 보이도록 */ */
-/*     border: 1px solid #ccc; */
+ 
+    position: absolute;  
+    top: 30px;   
+    right: 0px;      
     padding: 5px 10px;
     border-radius: 4px;
     font-size: 14px;
-    color: #ff785a; 
-    
-    /* 다른 요소 위에 표시되도록 z-index 설정 */
-    z-index: 10; 
-    
-    /* 확대 아이콘을 가리지 않도록 위치를 조정 */
-    /* Figma 임베드의 확대 버튼은 보통 오른쪽 상단 구석에 작은 아이콘으로 위치합니다. */
-    /* 캡션을 아이콘 바로 옆(왼쪽)에 배치하는 것이 가장 효과적입니다. */
-    transform: translateX(-30px); /* 캡션을 왼쪽으로 살짝 이동 (아이콘과의 간격 확보) */
+    color: #ff785a;     
+    z-index: 10;  
+    transform: translateX(-30px); 
     white-space: nowrap;
 }
 
 
-/* ** CSS for modal**  */   
+/* ** CSS for modal**  */    
 
-
-
-
-
-
-
-
-
-/* 
-========= */
+/* ==skills======= */
 
 
  section.skills{
@@ -1109,8 +1079,8 @@ section.portfolio {
 .skills_inner {
     width: 100%;
     max-width: 1280px;
-    margin: auto; 
-    height: 56vh;   
+    margin: auto;  
+    min-height : auto ;    
 }
 
 
@@ -1125,8 +1095,8 @@ section.portfolio {
   width: 70%;
   margin: 60px auto;
   display: grid;
-  grid-template-columns: 1fr 1fr; /* 2열 */
-  grid-template-rows: 1fr 1fr; /* 2행 */
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr; 
   gap: 60px; 
 }
 
@@ -1152,7 +1122,7 @@ section.portfolio {
 .circle-svg {
   width: 100%;
   height: 100%;
-  transform: rotate(-90deg); /* 위에서부터 시작 */
+  transform: rotate(-90deg);
 }
 
 /* 배경 원 */
@@ -1167,7 +1137,7 @@ section.portfolio {
   stroke: #022B5C;
   stroke-width: 10;
   stroke-linecap:round ; 
-  stroke-dasharray: 339.29;     /* 2πr (r=54) */
+  stroke-dasharray: 339.29;     
   stroke-dashoffset: 339.29;
   transition: stroke-dashoffset 1s ease;
 }
@@ -1205,24 +1175,24 @@ section.portfolio {
  section.contact {
     width : 100% ;  
     min-height : 36vh ;   
-    height : auto ; 
-    text-align: center;     
-     margin: 100px, 0,auto; 
+    height : auto ;       
+    margin-top: 100px ;        
+
  }
 
  .contact_inner {
     width: 100% ;
     max-width: 1280px;
-    min-height: auto;
-   
+    min-height: auto;    
     padding: 20px;
-    justify-content: center; 
+    justify-content: center;  
+    margin: auto ; 
  } 
 
  .contact_inner ul {
     display : flex ; 
     justify-content: space-evenly ; 
-    list-style: none ;
+    list-style: none ;  
  }
 
 
@@ -1230,8 +1200,8 @@ section.portfolio {
     width : 40vh ; 
     height : 12vh ;  
     line-height : 4.8rem ;  
-    padding : 40px ; 
- } 
+    padding : 40px ;  
+    text-align: center;  } 
 
  .con_box i {
   color : #022b5c;  
@@ -1334,30 +1304,24 @@ html, body{
   border: 0;       /* 드물게 생기는 상단 1px 라인 예방 */
 }
 
-/* (선택) iOS 노치 대응: 내용은 안전영역만 띄우고 헤더는 위에 밀착 */
-@supports (padding-top: env(safe-area-inset-top)) {
-  body { padding-top: env(safe-area-inset-top); }
-}
+
 
 
 .banner {
-  position: relative;
-/*   기본 배경: 부드러운 차가운 그라데이션 
- */ 
+  position: relative;  
   background: linear-gradient(135deg, #87ceeb 0%, #f9fbff 50%, #87ceeb 100%);
 }
   
-  
-  /* 패턴 추가: 은은한 도트 텍스처 */
+
   background-image:
     radial-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
     linear-gradient(135deg, #fafafa 0%, #f9fbff 50%, #fafafa 100%);
   background-size: 40px 40px, 100% 100%;
   background-repeat: repeat, no-repeat;
   background-blend-mode: normal;
-  overflow: hidden; /* 오버레이 정리를 위한 안정장치 */ 
+  overflow: hidden;  
 
-/* 빛의 흐름(overlay) */
+/* overlay */
 .banner::before {
   content: "";
   position: absolute;
@@ -1370,7 +1334,7 @@ html, body{
   z-index: -1;
 }
 
-/* 콘텐츠가 배경 위로 올라오도록 */
+/* 콘텐츠가 배경 위로 */
 .banner_text,
 .portrait {
   position: relative;
